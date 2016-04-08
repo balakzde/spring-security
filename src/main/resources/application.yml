@@ -1,0 +1,23 @@
+debug: true
+
+spring:
+  aop:
+    proxy-target-class: true
+
+
+security:
+  user:
+    password: none
+  oauth2:
+    client:
+      accessTokenUri: https://auth.fit.cvut.cz/oauth/token
+      userAuthorizationUri: https://auth.fit.cvut.cz/oauth/authorize
+      clientId: clientId
+      clientSecret: clientSecret
+      scope: urn:zuul:oauth:sample:read
+    resource:
+      tokenInfoUri: https://auth.fit.cvut.cz/oauth/check_token
+
+logging:
+  level:
+    org.springframework.security: DEBUG
